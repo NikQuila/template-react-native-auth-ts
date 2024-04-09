@@ -1,0 +1,40 @@
+{
+  "cli": {
+    "version": ">= 3.18.3"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "development-simulator": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "simulator": true
+      }
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {
+      "channel": "production",
+      "distribution": "store",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://api-pitelematics-b57cc2793062.herokuapp.com",
+        "EXPO_PUBLIC_FIREBASE_API_KEY": "AIzaSyBmjc5uKj0D7uh9aOrYe2FE1La6QQtfzmk",
+        "EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN": "carapp-394716.firebaseapp.com",
+        "EXPO_PUBLIC_FIREBASE_PROJECT_ID": "carapp-394716",
+        "EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET": "carapp-394716.appspot.com",
+        "EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID": "603487713081",
+        "EXPO_PUBLIC_FIREBASE_APP_ID": ":1:603487713081:web:d7e839aab15f342041dae8"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

@@ -16,13 +16,13 @@ import {
   Text,
   TextInput,
 } from 'react-native';
-// components
-import CustomButton from '../../components/custom-button';
 // utils
 import { AuthScreens } from '../../utils/screen-types';
 import { StackScreenProps } from '@react-navigation/stack';
 import fonts from '../../utils/fonts';
 import colors from '../../utils/colors';
+import { NormalText, SMText } from '../../components/ui/texts';
+import { CustomButton } from '../../components/ui/buttons';
 
 interface props extends StackScreenProps<AuthScreens> {}
 
@@ -59,7 +59,7 @@ const LoginScreen = ({ navigation }: props) => {
             style={{ height: 150, width: 200 }}
             resizeMode='contain'
           />
-          <Text style={styles.subTitle}>By NikQuila</Text>
+          <SMText>By NikQuila</SMText>
         </View>
         <View style={styles.form}>
           <TextInput
@@ -94,13 +94,12 @@ const LoginScreen = ({ navigation }: props) => {
             </View>
           ) : (
             <CustomButton
-              title={'Iniciar sesion'}
-              backgroundColor={colors.appMain}
-              fontSize={16}
-              height={40}
-              width={290}
+              text='Iniciar Sesión'
               onPress={handleLogin}
-              textColor='white'
+              variant='solid'
+              type='primary'
+              isFullWidth
+              size='md'
             />
           )}
           {error && <Text style={styles.error}>{error}</Text>}
